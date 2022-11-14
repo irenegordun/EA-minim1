@@ -1,0 +1,123 @@
+<!-- <div class="form">
+    <div class="title">Welcome to parking!</div>
+    <div class="subtitle">Let's create your spot!</div>
+    <div class="input-container ic1">
+        <input id="email" class="input" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="email" class="placeholder">Email</label>
+    </div>
+    <div class="input-container ic2">
+        <input id="type" class="input" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="type" class="placeholder">Type</label>
+    </div>
+    <div class="input-container ic2">
+        <input id="price" class="input" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="price" class="placeholder">Price</label>
+    </div>
+    <div class="input-container ic2">
+        <input id="size" class="input" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="size" class="placeholder">Size</label>
+    </div>
+    <div class="input-container ic2">
+        <input id="difficulty" class="input" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="difficulty" class="placeholder">Difficulty</label>
+    </div>
+    <div class="input-container ic2">
+        <input id="country" class="input" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="country" class="placeholder">Country</label>
+    </div>
+    <div class="input-container ic2">
+        <input id="city" class="input" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="city" class="placeholder">City</label>
+    </div>
+    <div class="input-container ic2">
+        <input id="street" class="input" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="street" class="placeholder">Street</label>
+    </div>
+    <div class="input-container ic2">
+        <input id="spotNumber" class="input" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="spotNumber" class="placeholder">SpotNumber</label>
+    </div>
+    <div class="input-container ic2">
+        <input id="streetNumber" class="input" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="streetNumber" class="placeholder">StreetNumber</label>
+    </div>
+    <button type="text" class="submit">submit</button>
+</div> -->
+<mat-toolbar color="primary">Crear un parking</mat-toolbar>
+<router-outlet></router-outlet>
+<form [formGroup]="parkingForm" (ngSubmit)="onSubmit()">
+    <p>
+        <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="fill">
+            <mat-label>Type of car</mat-label>
+            <input matInput formControlName="type">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="fill">
+            <mat-label>Price</mat-label>
+            <input matInput formControlName="price">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="fill">
+            <mat-label>Size</mat-label>
+            <input matInput formControlName="size">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="fill">
+            <mat-label>Difficulty</mat-label>
+            <input matInput formControlName="difficulty">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="fill">
+            <mat-label>Country</mat-label>
+            <input matInput formControlName="country">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="fill">
+            <mat-label>City</mat-label>
+            <input matInput formControlName="city">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="fill">
+            <mat-label>Street</mat-label>
+            <input matInput formControlName="street">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="fill">
+            <mat-label>Spot Number</mat-label>
+            <input matInput formControlName="spotNumber">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="fill">
+            <mat-label>Street Number</mat-label>
+            <input matInput formControlName="streetNumber">
+        </mat-form-field>
+    </p>
+    <p>
+        <button mat-raised-button color="primary" type="submit" [disabled]="!parkingForm.valid">Submit</button>
+    </p>
+
+</form>

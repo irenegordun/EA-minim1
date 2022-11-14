@@ -1,0 +1,17 @@
+<div class="parking">
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>{{parking.price}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>Parking Size: {{parking.size}}</mat-card-content>
+    <mat-card-content>Parking Score: {{parking.score}}</mat-card-content>
+    <mat-card-content>Parking Country?: {{parking.country}}</mat-card-content>
+    <mat-card-content>Parking City: {{parking.city}}</mat-card-content>
+    <mat-card-content>Parking Street: {{parking.street}}</mat-card-content>
+    <mat-card-content>Parking spotNumber: {{parking.spotNumber}}</mat-card-content>
+    <mat-card-content>Parking streetNumber: {{parking.streetNumber}}</mat-card-content>
+    <mat-card-actions><button mat-raised-button color="warn" (click)="cancel()">delete</button></mat-card-actions>
+    <input name="newPrice" type="text" id="newPrice" placeholder="new Price">
+<mat-card-actions><button mat-raised-button color="warn" (click)="update()">update</button></mat-card-actions>
+  </mat-card>
+</div>

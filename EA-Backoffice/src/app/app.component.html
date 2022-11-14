@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">WELCOME TO APARCA'M</mat-toolbar>
+<ul class="nav navbar-nav">
+    <li>
+      <a (click)="goToAddUser()">Register</a>
+    </li>
+    <li>
+      <a (click)="goToLogin()">Login</a>
+    </li>
+    <li>
+      <a (click)="goToUserList()">Users List</a>
+    </li>
+    <li>
+        <a (click)="goToAddParking()">Create Parking</a>
+    </li>
+    <li>
+        <a (click)="goToParkingList()">Parkings List</a>
+    </li>
+  </ul>
+
+<router-outlet></router-outlet>

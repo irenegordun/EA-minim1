@@ -1,0 +1,7 @@
+<div class="parkings">
+  <app-parking
+    (cancelParking)="cancelOneParking($event)"
+    (updateParking)="updateOneParking($event)"
+    [parking]="parking"
+    *ngFor="let parking of parkings"></app-parking>
+</div>
