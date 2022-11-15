@@ -9,7 +9,8 @@ const User = new Schema({
     myBookings: [{ type: Schema.Types.ObjectId, ref: 'Booking'}],
     myOpinions: [{ type: Schema.Types.ObjectId, ref: 'Opinion'}],
     myFavorites: [{ type: Schema.Types.ObjectId, ref: 'Parking'}],
-    myParkings: [{ type: Schema.Types.ObjectId, ref: 'Parking'}]
+    myParkings: [{ type: Schema.Types.ObjectId, ref: 'Parking'}],
+    myReports: [{type: Schema.Types.ObjectId, ref:'Report'}],
 });
 
 export default model('User', User);

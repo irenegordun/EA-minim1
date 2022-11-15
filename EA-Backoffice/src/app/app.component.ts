@@ -27,4 +27,14 @@ export class AppComponent {
   goToParkingList() {
     this.router.navigate(['/', 'parkings']);
   }
+
+  //mínim IRENE GORDUN
+
+  goToReportForm(){
+    this.router.navigate(['/', 'newReport']);
+  }
+  goReportList(){
+    this.router.navigate(['/', 'reportsList']);
+  }
+  
 }

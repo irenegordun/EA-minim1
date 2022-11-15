@@ -5,6 +5,8 @@ import { LoginComponent } from './components/login/login.component';
 import { ParkingsComponent } from './components/parkings/parkings.component';
 import { CreateParking2Component} from './components/create-parking2/create-parking2.component'
 import { FormComponent } from './components/form/form.component';
+import { ReportFormComponent } from './components/report-form/report-form.component'
+import { ReportsComponent } from './components/reports/reports.component';
 
 const routes: Routes = [
   {
@@ -26,6 +28,14 @@ const routes: Routes = [
   {
     path: "newuser",
     component: FormComponent
+  },
+  {
+    path: "newReport",
+    component: ReportFormComponent
+  },
+  {
+    path: "reportsList",
+    component: ReportsComponent
   }
 ];
 

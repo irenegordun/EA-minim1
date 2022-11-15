@@ -23,6 +23,7 @@ import {DialogModule} from '@angular/cdk/dialog';
     MatFormFieldModule,
     MatInputModule,
     DialogModule
+  
   ]
 })
 export class MaterialModule { }

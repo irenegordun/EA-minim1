@@ -30,11 +30,11 @@ const register = async (req: Request, res: Response) => {
 			// address: address1._id
 		});
 		await newParking.save().catch(Error);
-		await User.updateOne(
+		await User.updateOne(// ASSOCIAR PARQUING
 			{ _id: user1 },
 			{ $addToSet: { myParkings: newParking._id } }
 		);
-		res.status(200).json({ auth: true });
+		res.status(200).json({ auth: true }); // PART IMPORTANT!!
 	}
 	catch {
 		res.status(400).json({ message: 'User not found' });
@@ -49,7 +49,7 @@ const cancel = async (req: Request, res: Response) => {
 			res.status(400).json({ message: 'Parking not found' });
 		}
 		await Parking.findByIdAndDelete(_id).catch(Error);
-		await User.updateOne(
+		await User.updateOne( // DEASSOCIAR PARQUING
 			{ _id: parking.user },
 			{ $pull: { myParkings: parking._id } }
 		);

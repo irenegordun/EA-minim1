@@ -1,0 +1,13 @@
+<div class="report">
+    <mat-card class="card">
+        <mat-card-header>
+            <mat-card-title>{{report.reportingUser}}</mat-card-title>
+            </mat-card-header>
+        <mat-card-content>Report Mail: {{report.email}}</mat-card-content>
+        <mat-card-content>Report Description: {{report.description}}</mat-card-content>
+        <mat-card-actions><button mat-raised-button color="warn" (click)="delete()">delete</button></mat-card-actions>
+            <input name="newDescription" type="text" id="newDescription" placeholder="new Description" #newName>
+            <input name="newImportance" type="number" id="newImportance" placeholder="new Importance" #newImportance>
+        <mat-card-actions><button mat-raised-button color="warn" (click)="update(newDescription.value, newImportance.value)">update</button></mat-card-actions>
+    </mat-card>
+</div>

@@ -1,0 +1,22 @@
+<div class="report" >
+    <mat-card class="card" *ngFor="let report of reports">
+
+        <mat-card-content>Reporting User: {{ report.reportingUser }}</mat-card-content>
+        <mat-card-content>Reporting Description: {{ report.description }}</mat-card-content>
+        <mat-card-content>Importance: {{report.importance}}</mat-card-content>
+
+        <mat-card-actions><button mat-raised-button color="warn" (click)="deleteReport(report._id!)">delete</button></mat-card-actions> 
+
+           
+        <!-- <input name="newDescription" type="text" id="newDescription" placeholder="new Description" #newName>
+        <input name="newImportance" type="number" id="newImportance" placeholder="new Importance" #newImportance>
+        <mat-card-actions><button mat-raised-button color="warn" (click)="update(newDescription.value, newImportance.value)">update</button></mat-card-actions> -->
+    </mat-card>
+</div>
+
+<!-- <div class="reports">
+    <app-user 
+    (deleteReport)="deleteReport($event)"
+    [report]="report" 
+    *ngFor="let report of report"></app-report>
+</div> -->
